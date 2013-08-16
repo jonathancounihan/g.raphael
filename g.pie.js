@@ -33,7 +33,7 @@
  o legendcolor (string) color of text in legend [default `"#000"`]
  o legendothers (string) text that will be used in legend to describe options that are collapsed into 1 slice, because they are too small to render [default `"Others"`]
  o legendmark (string) symbol used as a bullet point in legend that has the same colour as the chart slice [default `"circle"`]
- o legendpos (string) position of the legend on the chart [default `"east"`]. Other options are `"north"`, `"south"`, `"west"`
+ o legendpos (string) position of the legend on the chart [default `"east"`]. Other options are `"north"`, `"south"`, `"west"` and `"none"`
  o }
  **
  = (object) path element of the popup
@@ -272,7 +272,7 @@
             chart.push(chart.labels);
         };
 
-        if (opts.legend) {
+        if (opts.legend && opts.legendpos != "none") {
             legend(opts.legend, opts.legendothers, opts.legendmark, opts.legendpos);
         }
 
